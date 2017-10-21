@@ -1,0 +1,284 @@
+/************************************************************************
+fonts*****************************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700,800&subset=cyrillic');
+
+
+/************************************************************************
+global*****************************************************************/
+
+* {
+    font-family: 'Fira Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    transition: .4s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+.wrapper {
+    min-width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.wrapper-inner {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+button {
+    width: 176px;
+    height: 55px;
+    font-weight: 800;
+    font-size: 17px;
+    color: white;
+    border: none;
+    transition: .4s;
+}
+
+button:active,
+button:focus {
+    outline: none;
+}
+
+.button-red {
+    background: radial-gradient(circle, rgba(255, 102, 102, .6), transparent) no-repeat center,
+                url(../source/images/button-red.png) no-repeat;
+    background-size: 92%, 100%;
+}
+
+.button-black {
+    background: radial-gradient(circle, rgba(57, 57, 57, 0.4), transparent) no-repeat center,
+    url(../source/images/button-black.png) no-repeat;
+    background-size: 92%, 100%;
+
+}
+
+.button-red:hover {
+    background: radial-gradient(circle, rgba(255, 102, 102, .0), transparent) no-repeat center,
+                url(../source/images/button-red.png) no-repeat;
+    background-size: 92%, 100%;
+    cursor: pointer;
+}
+
+.button-black:hover {
+    background: radial-gradient(circle, rgba(96, 96, 96, 0), transparent) no-repeat center,
+    url(../source/images/button-black.png) no-repeat;
+    background-size: 92%, 100%;
+    cursor: pointer;
+}
+
+/************************************************************************
+header
+*****************************************************************/
+
+header[role='banner'] {
+    background: #fff;
+    flex-grow: 0;
+}
+
+header[role='banner'] .wrapper-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0;
+}
+
+.logo-header img {
+    transition: .4s;
+    vertical-align: middle;
+}
+
+.logo-header:hover {
+    opacity: 0.7;
+}
+
+
+/***** если допустить, что телефонный блок не отличается в футере и хедере (на самом деле - отличаются) ****/
+.phone-block a {
+    font-size: 25px;
+    color: black;
+}
+
+.phone-block a span{
+    font-size: inherit;
+    color: #d53b3b;
+}
+
+.phone-block a:hover {
+    text-decoration: none;
+    color: #d53b3b;
+}
+
+.phone-block > span {
+    display: block;
+    color: #334247;
+    font-size: 14px;
+}
+
+nav a {
+    color: black;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 25px 0 0;
+}
+
+nav a:last-of-type {
+    margin: 0;
+}
+
+/************************************************************************
+main
+*****************************************************************/
+
+main {
+    background: url(../source/images/background.jpg) no-repeat center top;
+    background-size: cover;
+    flex-grow: 1;
+    color: #fff;
+    text-align: center;
+}
+
+
+/*из-за того, что футер позиционирован абсолютно, пришлось задать нижний отсутп в main с учетом высоты футера. не гибко, но другого решения не нашел */
+main .wrapper-inner {
+    padding: 100px 0 250px;
+}
+
+main h1 {
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 57px;
+}
+
+div .main-descript {
+    font-size: 20px;
+    margin: 30px 0 0 0;
+    line-height: 25px;
+}
+
+main ul {
+    list-style-type: none;
+    margin: 34px 0 0 0;
+}
+
+main .main-buttons button {
+    margin: 24px 26px 0 0;
+}
+
+main .main-buttons button:last-child {
+    margin: 24px 0 0 0;
+}
+
+main .partners {
+    margin: 93px 0 0 0;
+}
+
+main h2 {
+    font-size: 27px;
+    font-weight: 600;
+    color: #db3232;
+}
+
+main ul li {
+    display: inline-block;
+    margin: 0 32.5px 0 00px;
+}
+
+main ul li:last-of-type {
+    margin: 0;
+}
+
+main ul li a {
+    display: inline-block;
+    color: #fff;
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.partner-logo {
+    background: #fff;
+    width: 143px;
+    height: 143px;
+    border-radius: 71px;
+    line-height: 145px;
+}
+
+.partner-logo img  {
+    vertical-align: middle;
+}
+
+.partner-logo img:hover {
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+
+/************************************************************************
+footer
+*****************************************************************/
+
+
+footer[role='contentinfo'] {
+    background: #fff;
+    flex-grow: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+}
+
+footer[role='contentinfo']:before,
+footer[role='contentinfo']:after {
+    content: '';
+    height: 5px;
+    display: block;
+    background: url(../source/images/footer-border.png) repeat-x;
+    margin-top: -4px;
+}
+
+footer[role='contentinfo']:after {
+    transform: scale(1, -1);
+    margin-bottom: -4px;
+}
+
+footer[role='contentinfo'] .wrapper-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0 35px;
+}
+
+.logo-footer {
+    display: inline-block;
+    vertical-align: middle;
+    height: 36px;
+    width: 41px;
+    overflow: hidden;
+}
+
+.logo-footer img {
+    display: block;
+    height: 36px;
+}
+
+.logo-block span {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 0 10px;
+}
